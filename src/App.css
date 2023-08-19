@@ -44,6 +44,16 @@ nav {
   color: #585d64;
 }
 
+.kanban-heading {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.kanban-heading img {
+  width: 1.5em;
+}
+
 .ticket {
   margin: 8px 0;
   padding: 1.5em;
@@ -126,14 +136,24 @@ nav {
 
 .ticket-title {
   font-size: 1rem;
-  margin: 0.75em 0;
   font-weight: 400;
+}
+
+.ticket-main {
+  display: flex;
+  margin: 1em 0;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.ticket-main img {
+  width: 1.5em;
 }
 
 .ticket-details {
   font-size: 0.75rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   color: #585d64;
   gap: 2em;
 }
@@ -142,6 +162,10 @@ nav {
   font-weight: 400;
   box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.125);
   padding: 0.25em 0.375em;
+}
+
+.ticket-details img {
+  width: 2em;
 }
 
 @media (max-width: 768px) {

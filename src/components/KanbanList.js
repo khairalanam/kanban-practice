@@ -1,7 +1,7 @@
 import React from "react";
 import Ticket from "./Ticket";
 
-const KanbanList = ({ title, tickets, orderingOption, users }) => {
+const KanbanList = ({ title, icon, tickets, orderingOption, users }) => {
   const sortedTickets = [...tickets].sort((a, b) => {
     if (orderingOption === "title") {
       return a.title.localeCompare(b.title);
@@ -15,7 +15,10 @@ const KanbanList = ({ title, tickets, orderingOption, users }) => {
 
   return (
     <div className="kanban-list">
-      <h3>{title}</h3>
+      <div className="kanban-heading">
+        {icon}
+        <h3>{title}</h3>
+      </div>
       {sortedTickets.map((ticket) => {
         for (let user of users) {
           if (user.id === ticket.userId) {

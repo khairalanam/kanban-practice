@@ -8,6 +8,7 @@ const KanbanBoard = ({ groupedTickets, orderingOption, users }) => {
         <KanbanList
           key={group.title}
           title={group.title}
+          icon={group.icon}
           tickets={group.tickets}
           orderingOption={orderingOption}
           users={users}

@@ -1,3 +1,5 @@
+import priorityIcons from "../icons/priorityIcons";
+
 const groupByPriority = (tickets) => {
   const groups = {
     4: [],
@@ -15,6 +17,7 @@ const groupByPriority = (tickets) => {
 
   return Object.keys(groups).map((priority) => ({
     title: priorityLevel[priority],
+    icon: priorityIcons[priority],
     tickets: groups[priority],
   }));
 };

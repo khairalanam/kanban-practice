@@ -1,3 +1,5 @@
+import statusIcons from "../icons/statusIcons";
+
 const groupByStatus = (tickets) => {
   const groups = {};
 
@@ -8,6 +10,7 @@ const groupByStatus = (tickets) => {
 
   return Object.keys(groups).map((status) => ({
     title: status,
+    icon: statusIcons[status],
     tickets: groups[status],
   }));
 };
